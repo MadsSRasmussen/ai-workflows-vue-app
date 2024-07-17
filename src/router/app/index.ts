@@ -7,6 +7,7 @@ import Home from '@/views/app/home/Home.vue';
 
 export const appRoutes: RouteRecordRaw[] = [{
         path: '',
+        name: 'home',
         component: Home
     }, {
         path: '/profile',
