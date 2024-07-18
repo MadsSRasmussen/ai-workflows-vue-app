@@ -4,6 +4,7 @@ import Profile from '@/views/app/profile/Profile.vue'
 export const profileRoutes: RouteRecordRaw[] = [
     {
         path: '',
-        component: Profile
+        component: Profile,
+        name: 'profile'
     }
 ] 

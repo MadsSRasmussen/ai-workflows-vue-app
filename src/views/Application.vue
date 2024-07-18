@@ -1,8 +1,25 @@
 <script setup lang="ts">
-import Sidebar from '@/components/sidebar/Sidebar.vue';
+import { Sidebar } from '@/components/ui';
 
 </script>
 <template>
-    <Sidebar />
-    <RouterView />
+    <div class="grid grid-flow-row grid-cols-[300px_1fr] fixed w-full h-full">
+        <Sidebar />
+        <div class="bg-gray-100 dark:bg-gray-800 w-full h-full custom_shadow p-10 pl-12 pr-12">
+            <RouterView />
+        </div>
+    </div>
 </template>
+<style scoped>
+.custom_shadow {
+    
+    @media (prefers-color-scheme: light) {
+        box-shadow: inset 36px 0px 36px -16px rgb(194, 194, 194);
+    }
+
+    @media (prefers-color-scheme: dark) {
+        box-shadow: inset 36px 0px 36px -16px rgb(27, 27, 27);
+    }
+
+}
+</style>
