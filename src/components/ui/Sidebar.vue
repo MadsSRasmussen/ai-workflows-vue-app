@@ -27,7 +27,7 @@ const navigationItems = computed<VerticalNavigationItem[]>(() => [
 <template>
     <div class="w-full h-full flex flex-col gap-4 items-center bg-gray-50 dark:bg-gray-900 p-5">
         <ApplicationLogo />
-        <VerticalNavigation :items="navigationItems" />
+        <VerticalNavigation :items="navigationItems" on-selected-class-adds="bg-gray-100 text-gray-800" />
     </div>
 </template>
 <style scoped>

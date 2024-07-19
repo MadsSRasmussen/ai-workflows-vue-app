@@ -1,6 +1,5 @@
 // Component exports:
 export { default as MainPageSection } from './main-page/MainPageSection.vue';
-export { default as MainPageSpacer } from './main-page/MainPageSpacer.vue';
 export { default as MainPageSectionContainer } from './main-page/MainPageSectionContainer.vue';
 
 export { default as VerticalNavigation } from './navigation/VerticalNavigation.vue';

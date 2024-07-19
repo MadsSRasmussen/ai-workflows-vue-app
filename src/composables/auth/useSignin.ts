@@ -3,7 +3,6 @@ import { useRouter } from "vue-router";
 import { useCurrentUser, useFirebaseAuth } from "vuefire";
 import { signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 
-
 export function useSignin() {
 
     const signinPending = ref<boolean>(false);
@@ -36,7 +35,7 @@ export function useSignin() {
                     console.error('Signin failed', err);
                 })
         }
-
+    
     }
 
     return {

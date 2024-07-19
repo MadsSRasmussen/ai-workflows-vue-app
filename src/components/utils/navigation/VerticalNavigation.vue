@@ -5,7 +5,8 @@ import { useRouter, useRoute } from 'vue-router';
 import { PotentialLinkWrapper } from '@/components/utils';
 
 defineProps<{
-    items: VerticalNavigationItem[]
+    items: VerticalNavigationItem[],
+    onSelectedClassAdds: string,
 }>();
 
 const route = useRoute();
@@ -28,7 +29,7 @@ function isSubRoute(to?: RouteLocationRaw): boolean {
             v-for="item in items" 
             :to="item.to" 
             class="text-gray-500 w-full h-8 p-2 flex items-center gap-2 hover:bg-gray-100 transition-colors hover:cursor-pointer rounded-md font-medium" 
-            :class="isSubRoute(item.to) ? 'bg-gray-100 text-gray-800' : ''"
+            :class="isSubRoute(item.to) ? onSelectedClassAdds : ''"
         >
             <img class="h-6 rounded-full" v-if="item.avatar" :src="item.avatar" />
             <div class="w-6 flex justify-center" v-if="item.icon">
